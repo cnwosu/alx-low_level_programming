@@ -21,7 +21,7 @@ char *leet(char *s)
 		{
 			if (s[a] == r[b] || s[a] - 32 == r[b])
 			{
-																		s[a] = n[b];
+				s[a] = n[b];
 			}
 			b++;
 		}
