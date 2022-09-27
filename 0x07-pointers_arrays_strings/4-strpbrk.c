@@ -13,17 +13,23 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
+	char *p;
 
-	for (i = 0; s[i] != '\0'; i++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (s[i] == accept[j])
+			if (accept[j] == s[i])
 			{
-				s = s + i;
-				return (s);
+				p = &s[i];
+				return (p);
 			}
-		}
+			j++;
+																				}
+		i++;
 	}
-	return (NULL);
+
+	return (0);
 }
