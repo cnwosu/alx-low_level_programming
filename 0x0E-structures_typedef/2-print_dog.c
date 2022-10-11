@@ -5,11 +5,16 @@
 /**
  * print_dog - prints a struct dog
  * @d: pointer to dog
+ * Return: Void
  */
 
 void print_dog(struct dog *d)
 {
-	if (d != NULL)
+	if (d == 0)
+	{
+		return;
+	}
+	else
 	{
 		if (d->name == NULL)
 		{
